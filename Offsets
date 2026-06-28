@@ -8,7 +8,7 @@ const OFFSETS = {
     StringCtor:                                      0xDCF8F0,
     LogicBattleModeClient_getOwnPlayerTeam:          0xB90680,
     LogicGameObjectClient_getGlobalID:               0xAE49C8,
-    LogicGameObjectClient_getData:                  0xAE46FC,
+    LogicGameObjectClient_getData:                   0xAE46FC,
     LogicProjectileData_getRadius:                   0xA8164C,
     LogicProjectileData_getSpeed:                    0xA815CC,
     LogicCharacterData_getCollisionRadius:           0xA3B52C,
