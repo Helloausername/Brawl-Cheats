@@ -171,3 +171,84 @@ const BRAWLER_HITBOX = {
     87: 40, 88: 40, 89: 40, 90: 40, 91: 40, 92: 50,
     93: 40, 94: 40, 95: 50, 98: 40, 99: 40,
 };
+
+// ====== AUTOAIM PREDICTION CONFIG ======
+const AIM_CFG = {
+    HISTORY_LEN:         10,
+    STALE_MS:            1500,
+    STATIONARY_THRESHOLD: 50,
+    SCORE_DIST_WEIGHT:   1.0,
+    SCORE_SPEED_WEIGHT:  0.3,
+    SCORE_APPROACH_WEIGHT: 0.4,
+};
+
+const SHOOT_LAG_S = 0.025;
+const SPREAD_BRAWLER_IDS = new Set([0, 2, 4, 12, 13, 16, 17, 18, 28, 30, 35, 36, 50, 63]);
+const EMA_ALPHA = 0.4;
+const BURST_LOCK_MS = 200;
+
+// ====== DODGE PREDICTION CONFIG ======
+const CONFIG = {
+    SAFETY_MARGIN: 25,
+    HITBOX_SCALE: 1.08,
+    T_URGENT_MIN: 0.45,
+    T_URGENT_MAX: 0.70,
+    DODGE_COMMIT_MS: 70,
+    N_DIRECTIONS: 16,
+    MAX_DIST_SQ: 5000 * 5000,
+    STALE_MS: 300,
+    MOMENTUM_BONUS: 80,
+    ACTIVATION_LEAD_S: 0.60,
+    RELEASE_GRACE_MS: 120,
+    CHAR_SPEED: 720,
+    LAG_COMPENSATION_S: 0.030,
+    DODGE_EXIT_CLEARANCE: 30,
+    TIME_TIEBREAK_WEIGHT: 60,
+    COMMIT_KEEP_BAND: 25,
+    DESPERATE_KEEP_BAND: 40,
+    LOCK_DRIFT_MAX: 220,
+    URGENT_WINDOW_CACHE_MS: 250,
+};
+
+const BRAWLER_AOE_IMPACT_RADIUS = {
+    6: 220,
+    9: 240,
+    22: 260,
+    37: 240,
+    40: 180,
+    48: 220,
+    82: 200,
+};
+
+// ====== PREDICTION PARAMETERS ======
+const PREDICTION = {
+    // Intercept calculation
+    PROJ_SPEED_MAX_ITERATIONS: 6,
+    MAX_PRED_TIME: 1.5,
+    MIN_DISTANCE_THRESHOLD: 100,
+    
+    // Target velocity estimation
+    DECAY_RATE: 3.0,
+    MAX_SPEED: 4000,
+    
+    // Juke detection
+    JUKE_SIGN_CHANGE_THRESHOLD: 0.35,
+    ANGLE_CHANGE_THRESHOLD: 0.3,
+    MIN_SPEED_FOR_JUKE: 100,
+    MIN_SAMPLES_FOR_JUKE: 5,
+    
+    // Profile adaptation
+    MIN_SAMPLES_FOR_PROFILE: 10,
+    AVG_ANGULAR_THRESHOLD_HIGH: 0.6,
+    AVG_ANGULAR_THRESHOLD_MID: 0.3,
+    JUKE_FREQUENCY_THRESHOLD: 0.3,
+    JUKE_CENTER_WEIGHT_MAX: 0.3,
+    
+    // Curve blending
+    CURVE_BLEND_HIGH: 0.3,
+    CURVE_BLEND_MID: 0.2,
+    CURVE_BLEND_LOW: 0.1,
+    LEAD_FACTOR_HIGH: 0.8,
+    LEAD_FACTOR_MID: 0.9,
+    LEAD_FACTOR_LOW: 1.0,
+};
