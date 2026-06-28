@@ -1,1 +1,76 @@
+const OFFSETS = {
+    LogicBattleModeClient_update:                    0xB8EEE0,
+    BattleMode_getInstance:                          0x954EE0,
+    LogicGameObjectClient_getX:                      0xAE4A1C,
+    LogicGameObjectClient_getY:                      0xAE4A24,
+    LogicBattleModeClient_getOwnCharacter:           0xB90A28,
+    BattleScreen_activateSkill:                      0x80274C,
+    StringCtor:                                      0xDCF8F0,
+    LogicBattleModeClient_getOwnPlayerTeam:          0xB90680,
+    LogicGameObjectClient_getGlobalID:               0xAE49C8,
+    LogicGameObjectClient_getData:                  0xAE46FC,
+    LogicProjectileData_getRadius:                   0xA8164C,
+    LogicProjectileData_getSpeed:                    0xA815CC,
+    LogicCharacterData_getCollisionRadius:           0xA3B52C,
+    ClientInput_constructor_int:                     0xB53A68,
+    ClientInputManager_addInput:                     0x79BF3C,
+    LogicBattleModeClient_setClientPredictionMoveTo: 0xB90B8C,
+    LogicTileMap_getTile:                            0x9DC190,
 
+    VTABLE_PROJECTILE_DATA:                          0x11501B0,
+
+    TileMap_Width:                                   0xC4,
+    TileMap_Height:                                  0xC8,
+    TileMap_TilesArray:                              0x20,
+    TileTypeData_BlocksMovement:                     0x56,
+
+    BattleMode_objectManagerPtr:                     0x28,
+    BattleMode_clientInputManager:                   0x58,
+
+    ObjectManager_objectsArray:                      0x00,
+    ObjectManager_count:                             0x0C,
+    ObjectManager_ptrStride:                         8,
+
+    GameObj_team:                                    0x40,
+    GameObj_deadFlag:                                0xD0,
+
+    CharData_speed:                                  0x1C4,
+    CharData_brawlerId:                              0x18,
+
+    Projectile_spawnAngle:                           0xB8,
+
+    ScString_length:                                 0x04,
+    ScString_data:                                   0x08,
+
+    TextField_setText:                               0xC4A978,
+    MovieClip_getTextFieldByName:                    0xC1D7B0,
+    BattleMode_enter:                                0x956664,
+    ButtonCallback:                                  0xC4DFCC,
+    Sprite_addChild:                                 0xC2D8C4,
+    TextField_setText_ui:                            0x598298,
+    DisplayObject_setXY:                             0xC16B4C,
+    MovieClip_gotoAndStopFrameIndex:                 0xC1C90C,
+    CustomButton_SetMovieClip:                       0xC4E18C,
+    GameButtonCtor:                                  0x597C48,
+    MessageManager__receiveMessage:                  0x7BAD14,
+    BattleScreen__updateAutoshoot:                   0x8076A0,
+    BattleScreen__updateMovement:                    0x809348,
+    GameScreen__getLogicBattle:                      0x818BCC,
+    MovieClipHelper__setTextAndScaleIfNecessary:     0x990CA8,
+    LogicProjectileData__isBeam:                     0xA81770,
+    StringTable_getMovieClip:                        0xBECE60,
+
+    BattleScreen__updateCameraParameters:            0x7FEDC8,
+    BattleScreen__update:                            0x56FA80,
+    BattleScreen_spectateWidget:                     0x3C8,
+    BattleScreen_spectateTextField:                  0x3D8,
+    BattleScreen_screenWidth:                        0x884,
+    BattleScreen_screenHeight:                       0x888,
+    BattleScreen_viewMatrix:                         0x7E8,
+
+    Message_port:                                    0x90,
+    Message_ipPtr:                                   0x98,
+
+    CAM_MODE_OFFSET:                                 0x8AC,
+    Killaura_nativeFire:                             0x802960,
+};
